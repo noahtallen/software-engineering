@@ -7,5 +7,12 @@ python:
   - "3.6"
   - "3.7-dev" # 3.7 development branch
 
+notifications:
+  email:
+    recipients:
+      - noahtallen@gmail.com
+    on_sucess: never,
+    on_failure: always
+
 # command to run tests:
 script: "python simple_tests.py"
