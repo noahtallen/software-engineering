@@ -12,7 +12,7 @@ notifications:
     recipients:
       - noahtallen@gmail.com
     on_sucess: never,
-    on_failure: always
+    on_failure: never
 
 # command to run tests:
 script: "python simple_tests.py"
