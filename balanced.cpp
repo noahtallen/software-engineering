@@ -23,21 +23,21 @@ bool isBalanced(const std::string &text){
         return false;
       }
       unmatched.pop();
-      return true;
+      break;
     case '}':
       if(unmatched.empty() || unmatched.top() != '{'){
         return false;
       }
       unmatched.pop();
-      return true;
+      break;
     case ')':
       if(unmatched.empty() || unmatched.top() != '('){
         return false;
       }
       unmatched.pop();
-      return true;
+      break;
     }
   }
   
-  return false;
+  return unmatched.empty();
 }
