@@ -9,3 +9,9 @@ notifications:
       - noahtallen@gmail.com
     on_sucess: never,
     on_failure: never
+
+before_install:
+  - pip install --user cpp-coveralls
+
+after_success:
+  - coveralls --include "balanced.c--" --gcov-options '\-lp'
